@@ -22,9 +22,29 @@ def run_program():
 
 
 
-def start_main_loop():
+def book_main_loop():
     """
     Запускает основное ядро программы
     :return:
     """
-    pass
+    while True:
+        input_data = GUI.input_data()
+        if input_data == 'exit':
+            return
+
+        elif input_data == '':
+            GUI.output_data(GUI.output_message['empty'])
+
+
+def contact_main_loop():
+    """
+    Запускает основное ядро программы
+    :return:
+    """
+    while True:
+        input_data = GUI.input_data()
+        if input_data == 'exit':
+            return
+
+        elif input_data == '':
+            GUI.output_data(GUI.output_message['em
