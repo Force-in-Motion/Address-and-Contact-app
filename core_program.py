@@ -14,7 +14,9 @@ def run_program():
 
     sl.load_data()
 
-    start_main_loop()
+    book_main_loop()
+
+    contact_main_loop()
 
     sl.save_data()
 
@@ -28,6 +30,7 @@ def book_main_loop():
     :return:
     """
     while True:
+        GUI.output_data(GUI.output_message['description'])
         input_data = GUI.input_data()
         if input_data == 'exit':
             return
@@ -47,4 +50,4 @@ def contact_main_loop():
             return
 
         elif input_data == '':
-            GUI.output_data(GUI.output_message['em
+            GUI.output_data(GUI.output_message[''])
